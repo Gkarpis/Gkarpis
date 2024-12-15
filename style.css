@@ -1,0 +1,259 @@
+:root {
+    --background-color: #ffffff;
+    --base-variant: #e8e9ed;
+    --text-color: #111528;
+    --main-title-color: blue;
+    --subtitle-color: rebeccapurple;
+    --sidebar-background: blueviolet;
+    --sidebar-hover-background: rgba(75, 0, 130, 0.8);
+    --section-title-color: blueviolet;
+    --photo-border-color: #ddd;
+    --photo-shadow-color: rgba(0, 0, 0, 0.2);
+    --button-background: #f0f0f0;
+    --button-color: #000000;
+}
+
+/* Root colors for Dark Mode */
+body.dark-mode {
+    --background-color: #1a1a1a; /* Darker background */
+    --base-variant: #2b2b2b; /* Darker gray variant */
+    --text-color: #e0e0e0; /* Light text for readability */
+    --main-title-color: #4a90e2; /* Soft blue for titles */
+    --subtitle-color: #c29fff; /* Lighter purple */
+    --sidebar-background: #3a3a5c; /* Muted dark purple */
+    --sidebar-hover-background: rgba(58, 58, 92, 0.8); /* Slightly darker hover effect */
+    --section-title-color: #6a5acd; /* Soft slate blue */
+    --photo-border-color: #444; /* Subtle border color */
+    --photo-shadow-color: rgba(255, 255, 255, 0.1); /* Faint light shadow */
+    --button-background: #333; /* Darker button background */
+    --button-color: #f5f5f5; /* Light text for buttons */
+}
+
+/* Apply variables to elements */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+button {
+    background-color: var(--button-background);
+    color: var(--button-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Dark mode-specific styles for sections */
+.sidebar {
+    background-color: var(--sidebar-background);
+}
+
+.sidebar a {
+    color: var(--text-color);
+}
+
+.sidebar a:hover {
+    background-color: var(--sidebar-hover-background);
+}
+
+main {
+    background-color: var(--base-variant);
+}
+
+section h2 {
+    color: var(--section-title-color);
+}
+
+.photo-gallery .gallery-img {
+    border: 2px solid var(--photo-border-color);
+    box-shadow: 2px 2px 5px var(--photo-shadow-color);
+    transition: transform 0.2s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+#paslaugos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.apie-section {
+    background: url('/images/workbench.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.main-title {
+    font-size: 50px;
+    color: var(--main-title-color);
+    font-weight: bold;
+}
+
+.subtitle {
+    color: var(--subtitle-color);
+}
+
+header {
+    background-color: var(--sidebar-background);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--sidebar-background);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: var(--sidebar-hover-background);
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--base-variant);
+    clear: both;
+}
+
+section {
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+
+section h2 {
+    color: var(--section-title-color);
+    margin-bottom: 10px;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery-img {
+    width: 30%;
+    height: auto;
+    border: 2px solid var(--photo-border-color);
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px var(--photo-shadow-color);
+    transition: transform 0.2s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+.clock-container {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+#clock {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--main-title-color);
+    padding: 10px;
+    background-color: var(--base-variant);
+    border: 2px solid var(--photo-border-color);
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 0 2px 5px var(--photo-shadow-color);
+}
+#contact-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid var(--photo-border-color);
+    border-radius: 5px;
+    background-color: var(--base-variant);
+}
+
+#contact-form label {
+    display: block;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+#contact-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--photo-border-color);
+    border-radius: 4px;
+}
+
+#output, #averageOutput {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid var(--photo-border-color);
+    background-color: var(--background-color);
+}
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+#averageText {
+    font-size: 1.2rem;
+    font-weight: bold;
+}

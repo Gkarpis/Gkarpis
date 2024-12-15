@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Gintaras Karosas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mano CV</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- MathJax Library -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#apie">Apie</a></li>
+                <li><a href="#nuotraukos">Nuotraukos</a></li>
+                <li><a href="#aprasymas">Aprašymas</a></li>
+                <li><a href="#paslaugos">Paslaugos</a></li>
+                <li><a href="#atlikti-darbai">Atlikti darbai</a></li>
+                <li><a href="#kontaktai">Kontaktai</a></li>
+            </ul>
+            <div class="theme-toggle-container">
+                <button id="themeToggle">Šviesus/Tamsus režimas</button>
+            </div>
+            <!-- Clock Container Added Here -->
+            <div class="clock-container">
+                <h3>Dabartinis laikas:</h3>
+                <div id="clock">--:--:--</div>
+            </div>
+        </nav>
+
+        <div>
+            <section id="apie" class="apie-section">
+                <div class="text-center">
+                    <p class="main-title">Gintaras Karosas</p>
+                    <h3 class="subtitle">Elektronikos inžinerijos studentas </h3>
+                </div>
+            </section>
+
+            <main>
+                <section id="apie">
+                    <h2>Apie</h2>
+                    <p>Sveiki, kas skaitote! Mano vardas Gintaras Karosas ir aš esu Vilnius Tech antro kurso studentas.</p>
+                </section>
+
+                <section id="matematika">
+                    <h2>Matematinis Objektas</h2>
+                    <p>Šis matematinis objektas yra <strong>Cauchy integral formulė</strong>, naudojama kompleksiškai diferencijuojamų funkcijų analizėje:</p>
+                    
+                    <!-- MathJax LaTeX Code -->
+                    <p>\[
+                    f(a) = \frac{1}{2\pi i} \oint \frac{f(z)}{z-a} \, dz
+                    \]</p>
+
+                    <p>Kur \( f \) yra analizinė funkcija, o integralas atliekamas uždarąja kreive.</p>
+                </section>
+
+                <section id="nuotraukos" class="photos">
+                    <h2>Nuotraukos</h2>
+                    <div class="photo-gallery">
+                        <img src="/images/Background.jpg" alt="Nuotrauka 1" class="gallery-img">
+                        <img src="/images/Multi.jpg" alt="Nuotrauka 2" class="gallery-img">
+                        <img src="/images/workbench.jpg" alt="Nuotrauka 3" class="gallery-img">
+                    </div>
+                </section>
+
+                <section id="aprasymas">
+                    <h2>Aprašymas</h2>
+                    <ul>
+                        <li><strong>Darbo patirtis:</strong> Elektronikos inžinierius | Electrical solutions | 2018–2023<br>
+                            Atsakingas už komandos valdymą.</li>
+                        <li><strong>Išsilavinimas:</strong> Vilnius Tech 2023–?</li>
+                        <li><strong>Įgūdžiai:</strong> Keletas programavimo kalbų.</li>
+                    </ul>
+                </section>
+
+                <section id="paslaugos">
+                    <h2>Paslaugos</h2>
+                    <video width="400" controls>
+                        <source src="Video/videooo.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wkAp5x3Z_gc?si=aqLcCmvcv79qTlaK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <audio controls>
+                        <source src="audio/Sound.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </section>
+
+                <section id="atlikti-darbai">
+                    <h2>Atlikti darbai</h2>
+                    <p>Čia galite pamatyti mano atliktų projektų sąrašą (ši dalis dar ruošiama).</p>
+                </section>
+
+                <section id="kontaktai">
+                    <h2>Kontaktai</h2>
+                    <p>El. paštas: <a href="mailto:gintaras@example.com">gintaras@example.com</a></p>
+                    <p>Tel.: +370 600 00000</p>
+                </section>
+                <section id="contact-form">
+                    <h2>Kontaktų Forma</h2>
+                    <form id="contactForm">
+                        <label for="name">Vardas:</label>
+                        <input type="text" id="name" required><br>
+                
+                        <label for="surname">Pavardė:</label>
+                        <input type="text" id="surname" required><br>
+                
+                        <label for="email">El. paštas:</label>
+                        <input type="email" id="email" required><br>
+                
+                        <label for="phone">Telefono numeris:</label>
+                        <input type="tel" id="phone" required><br>
+                
+                        <label for="address">Adresas:</label>
+                        <input type="text" id="address" required><br>
+                
+                        <h3>Papildoma informacija:</h3>
+                        <label for="num1">Amžius:</label>
+                        <input type="number" id="num1" required><br>
+                
+                        <label for="num2">Asmens kodas:</label>
+                        <input type="number" id="num2" required><br>
+                
+                        <label for="num3">Mėgstamiausias skaičius:</label>
+                        <input type="number" id="num3" required><br>
+                
+                        <label for="num4">Aukštis :</label>
+                        <input type="number" id="num4" required><br>
+                
+                        <label for="num5">Vidurkis :</label>
+                        <input type="number" id="num5" required><br>
+                
+                        <button type="button" id="submitForm">Siųsti</button>
+                    </form>
+                    <div id="output"></div>
+                    <div id="averageOutput"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
